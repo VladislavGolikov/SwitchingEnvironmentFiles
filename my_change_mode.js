@@ -5,21 +5,20 @@ const key='assembly';
 const dev='development';
 const pro='production';
 
-const oldData=fs.readFileSync(fileName, 'utf-8');
+
+/* берется только первая строка из читаемого файла и очищается от мусорных символов */
+const newData=String(fs.readFileSync(fileName, 'utf-8').split('\n',1)).trim();
+
+/* только если сборка уже установлена в девелопмент - она становится продакшен, во всех остальных случаях - станет девелопмент! */
+const result=(newData.split("=")[0]===key&&newData.split("=")[1]==dev) ? pro : dev;
 
 
+console.log(`Предыдущее состояние: ${newData}`);
+console.log(`Переменная среды: ${key} установлена в значение ${result}`);
 
-const newData=String(oldData.split('\n',1)).trim();
+fs.writeFileSync('project.env', `${key}=${result}`);
 
-
-if (newData.split("=")[0]===key||newData.split("=")[1]==dev) {console.log(true)} else {console.log(false)}
-
-console.log(newData.split("=")[0]);
-console.log(newData.split("=")[1]);
-
-fs.writeFileSync('project.env', `${key}=${dev}`)
-
-
-setTimeout(()=>console.log(''),3000)
+/* не закрываем консоль 3 сек */
+setTimeout(()=>console.log(''),3000);
 
 
