@@ -1,4 +1,5 @@
 const fs=require('fs');
+const colors=require('colors');
 
 const fileName='project.env';
 const key='assembly';
@@ -13,12 +14,12 @@ const newData=String(fs.readFileSync(fileName, 'utf-8').split('\n',1)).trim();
 const result=(newData.split("=")[0]===key&&newData.split("=")[1]==dev) ? pro : dev;
 
 
-console.log(`Предыдущее состояние: ${newData}`);
-console.log(`Переменная среды: ${key} установлена в значение ${result}`);
+console.log(`Предыдущее состояние: ${newData.inverse}`.yellow);
+console.log(`\n\nПеременная среды: ${key.inverse} установлена в значение ${result.inverse}`.brightGreen);
 
 fs.writeFileSync('project.env', `${key}=${result}`);
 
 /* не закрываем консоль 3 сек */
-setTimeout(()=>console.log(''),3000);
+setTimeout(()=>console.log(''),6000);
 
 
