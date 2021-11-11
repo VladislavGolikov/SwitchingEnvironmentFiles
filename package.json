@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "mychange",
   "version": "1.0.0",
   "description": "the package changes the contents of the environment variable file to change the build mode",
@@ -19,12 +19,8 @@
   "bugs": {
     "url": "https://github.com/VladislavGolikov/SwitchingEnvironmentFiles/issues"
   },
-  "homepage": "https://github.com/VladislavGolikov/SwitchingEnvironmentFiles#readme"
+  "homepage": "https://github.com/VladislavGolikov/SwitchingEnvironmentFiles#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }
-
-
-
-
-
-
-
