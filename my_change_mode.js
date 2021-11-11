@@ -6,20 +6,48 @@ const key='assembly';
 const dev='development';
 const pro='production';
 
+try{
+    /* берется только первая строка из читаемого файла и очищается от мусорных символов */
+    const newData=String(fs.readFileSync(fileName, 'utf-8').split('\n',1)).trim();
 
-/* берется только первая строка из читаемого файла и очищается от мусорных символов */
-const newData=String(fs.readFileSync(fileName, 'utf-8').split('\n',1)).trim();
+    /* только если сборка уже установлена в девелопмент - она становится продакшен, во всех остальных случаях - станет девелопмент! */
+    const result=(newData.split("=")[0]===key&&newData.split("=")[1]==dev) ? pro : dev;
 
-/* только если сборка уже установлена в девелопмент - она становится продакшен, во всех остальных случаях - станет девелопмент! */
-const result=(newData.split("=")[0]===key&&newData.split("=")[1]==dev) ? pro : dev;
+    console.log(`Предыдущее состояние: ${newData.inverse}`.yellow);
+    console.log(`\n\nПеременная среды: ${key.inverse} установлена в значение ${result.inverse}`.brightGreen);
+
+    fs.writeFileSync(fileName, `${key}=${result}`);
+}
+catch(err){
+    console.log(err.message.red);
+    try{
+        fs.writeFileSync(fileName, `${key}=${dev}`);
+        console.log(`\nВоссоздание файла переменных среды...\nПеременная среды: ${key.inverse} установлена в значение ${dev.inverse}`.yellow);
+    }
+    catch(err){console.log(err.message.red)}
+}
+finally{
 
 
-console.log(`Предыдущее состояние: ${newData.inverse}`.yellow);
-console.log(`\n\nПеременная среды: ${key.inverse} установлена в значение ${result.inverse}`.brightGreen);
 
-fs.writeFileSync('project.env', `${key}=${result}`);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* не закрываем консоль 3 сек */
-setTimeout(()=>console.log(''),6000);
+setTimeout(()=>console.log(''),10000);
 
 
