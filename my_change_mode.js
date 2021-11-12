@@ -2,10 +2,24 @@ const path=require('path');
 const fs=require('fs');
 const colors=require('colors');
 
-const fileName=path.resolve(__dirname, `project.env`);
 const key='assembly';
 const dev='development';
 const pro='production';
+const fileExtension='env';
+let fileName=path.resolve(__dirname, `project.env`);;
+
+try{
+    /* берется только первый файл с совпадающим расширением из текущей папки: */
+    fileName=path.resolve(__dirname,fs.readdirSync(path.resolve(__dirname)).filter(function(el){
+        if (el.split('.')[1]==fileExtension) return el;
+    })[0]);
+}
+catch{
+    /* если ни одного файла не нашлось, создается дефолтный: */
+    console.log(`Файл с переменными окружения создается...\n`.red);
+
+}
+console.log(`Найден файл с переменными окружения: ${fileName}\n\n`.brightGreen);
 
 try{
     /* берется только первая строка из читаемого файла и очищается от мусорных символов */
@@ -27,11 +41,9 @@ catch(err){
     }
     catch(err){console.log(err.message.red)}
 }
-/* добавить поиск файла окружения - и в имя автоматом */
 
 
-
-/* не закрываем консоль */
-setTimeout(()=>console.log(''),6000);
+/* задержка закрытия консоли */
+setTimeout(()=>console.log(''),5000);
 
 
