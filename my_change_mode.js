@@ -1,7 +1,8 @@
+const path=require('path');
 const fs=require('fs');
 const colors=require('colors');
 
-const fileName='project.env';
+const fileName=path.resolve(__dirname, `project.env`);
 const key='assembly';
 const dev='development';
 const pro='production';
@@ -26,28 +27,11 @@ catch(err){
     }
     catch(err){console.log(err.message.red)}
 }
-finally{
+/* добавить поиск файла окружения - и в имя автоматом */
 
 
 
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* не закрываем консоль 3 сек */
-setTimeout(()=>console.log(''),10000);
+/* не закрываем консоль */
+setTimeout(()=>console.log(''),6000);
 
 
