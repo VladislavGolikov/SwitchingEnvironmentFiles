@@ -17,9 +17,9 @@
 
 
 При `успешной работе` командная строка будет иметь такой вид:<br><br>
-![командная строка раскрашена зеленым](examples/command_line1.jpg)<br><br>
+<img src="examples/command_line1.jpg" alt="командная строка раскрашена зеленым" width="320" ><br><br>
 Если `что-то пошло не так`, то вид будет такой:<br><br>
-<img src="examples/command_line23.jpg" alt="командная строка раскрашена красным" width="248" ><br><br>
+<img src="examples/command_line2.jpg" alt="командная строка раскрашена красным" width="320" ><br><br>
 
 
 
