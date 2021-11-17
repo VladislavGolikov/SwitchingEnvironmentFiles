@@ -23,31 +23,18 @@
 
 
 
-### Installing
+### Установка
 
-A step by step series of examples that tell you how to get a development env running
+~~Поскольку развертывание еще не произведено, этот пункт тоже пока не заполнен.~~
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Тестирование
 
 Тестирование проводилось вручную, были испытаны следующие комбинации:
-В рабочем каталоге находилось более одного файла с расширением .env
-В рабочем каталоге не было ни одного файла с расширением .env
-Файл .env был защищен от записи
-В файле .env было постороннее содержимое
++ В рабочем каталоге находилось более одного файла с расширением .env
++ В рабочем каталоге не было ни одного файла с расширением .env
++ Файл .env был защищен от записи
++ В файле .env было постороннее содержимое
 
 ### Break down into end to end tests
 
