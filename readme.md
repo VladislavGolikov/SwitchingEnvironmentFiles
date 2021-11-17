@@ -15,11 +15,18 @@
 Для более наглядного состояния работы скрипта используется пакет [colors](https://github.com/Marak/colors.js), который
 раскрашивает командную строку.<br>
 
-``` html
+
 При успешной работе командная строка будет такой:<br>
 ![командная строка раскрашена зеленым](examples/command_line1.jpg)
 Если что-то пошло не так, то такой:<br>
 ![командная строка раскрашена красным](examples/command_line2.jpg)
+
+``` html
+    <form class="makecubes">
+      <div class="formname">Конструктор вращающегося куба.</div>
+
+      <input id="sizecube" type="range" min="5" max="50" step="5" name="sizecube" value="5">
+      <label for="sizecube">размер</label>
 
 ```
 
