@@ -6,14 +6,16 @@
 'development' или 'production'. При необходимости он будет создавать файл или
 ключ с нуля.
 
-## Getting Started
+## Приступить к работе
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Поскольку развертывание еще не произведено, этот пункт пока не заполнен.
 
-### Prerequisites
+### Зависимости
 
-What things you need to install the software and how to install them
-
+Для более наглядного состояния работы скрипта используется пакет colors, который
+раскрашивает командную строку.
+При успешной работе командная строка будет такой:
+Если что-то пошло не так, то такой:
 ```
 Give examples
 ```
