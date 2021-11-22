@@ -4,7 +4,7 @@
   "description": "the package changes the contents of the environment variable file to change the build mode",
   "main": "my_change_mode.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "copy my_change_mode.js to ./node_modules/.bin/my_change_mode777.js"
   },
   "repository": {
     "type": "git",
