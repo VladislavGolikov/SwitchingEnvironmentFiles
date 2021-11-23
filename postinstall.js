@@ -1,8 +1,8 @@
-const path=require('path');
+﻿const path=require('path');
 const fs=require('fs');
 
 const fileName1=path.resolve(__dirname, `my_change_mode.cmd`);
-const fileName2=path.resolve(__dirname+`/node_modules/.bin/`, `my_change_mode.cmd`);
+const fileName2=path.join(__dirname,`..`,`.bin`, `my_change_mode.cmd`);
 
 try{
     fs.copyFileSync(fileName1, fileName2);
@@ -10,7 +10,7 @@ try{
 }
 catch(err){
     console.log(err);
-    console.log('Не удалось скопировать скрипт для ');
+    console.log('Не удалось скопировать скрипт для запуска');
 }
 
 
