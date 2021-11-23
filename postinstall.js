@@ -1,12 +1,17 @@
 const path=require('path');
 const fs=require('fs');
 
+const fileName1=path.resolve(__dirname, `my_change_mode.cmd`);
+const fileName2=path.resolve(__dirname+`/node_modules/.bin/`, `my_change_mode.cmd`);
 
-
-let fileName1=path.resolve(__dirname, `project.env`);
-let fileName2=path.resolve(__dirname+`/node_modules/.bin/`, `project2.env`);
-
-fs.copyFileSync(fileName1, fileName2)
+try{
+    fs.copyFileSync(fileName1, fileName2);
+    console.log('Для запуска скрипта использовать команду: "npm run sw"');
+}
+catch(err){
+    console.log(err);
+    console.log('Не удалось скопировать скрипт для ');
+}
 
 
 
