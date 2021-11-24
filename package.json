@@ -4,7 +4,7 @@
   "description": "the package changes the contents of the environment variable file to change the build mode",
   "main": "my_change_mode.js",
   "scripts": {
-    "postinstall": "start node ./node_modules/mychange/postinstall.js"
+    "postinstall": "echo 'постинсталл пущен!'"
   },
   "repository": {
     "type": "git",
