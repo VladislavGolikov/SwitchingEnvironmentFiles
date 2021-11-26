@@ -6,11 +6,12 @@ const key='assembly';
 const dev='development';
 const pro='production';
 const fileExtension='env';
-let fileName=path.resolve(__dirname, `project.env`);;
+const directory=path.join(__dirname,`..`,`..`);
+let fileName=path.resolve(directory, `project.env`);;
 
 try{
     /* берется только первый файл с совпадающим расширением из текущей папки: */
-    fileName=path.resolve(__dirname,fs.readdirSync(path.resolve(__dirname)).filter(function(el){
+    fileName=path.resolve(directory,fs.readdirSync(path.resolve(directory)).filter(function(el){
         if (el.split('.')[1]==fileExtension) return el;
     })[0]);
 }
