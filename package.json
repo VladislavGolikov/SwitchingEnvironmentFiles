@@ -5,7 +5,7 @@
   "main": "my_change_mode.js",
   "scripts": {
     "postinstall": "start node postinstall.js",
-    "preuninstall": "start node preuninstall.js"
+    "uninstall": "start node preuninstall.js"
   },
   "repository": {
     "type": "git",
