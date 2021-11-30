@@ -4,8 +4,7 @@
   "description": "the package changes the contents of the environment variable file to change the build mode",
   "main": "my_change_mode.js",
   "scripts": {
-    "postinstall": "start node postinstall.js",
-    "uninstall": "start node ./node_modules/mychange/preuninstall.js"
+    "postinstall": "start node postinstall.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +15,7 @@
     "environment variable"
   ],
   "author": "Vladislav Golikov",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/VladislavGolikov/SwitchingEnvironmentFiles/issues"
   },
