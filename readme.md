@@ -18,7 +18,8 @@
  ```
 будет переключать переменную среды в соответствующее значение.
 
-<img src="examples/command_line1.jpg" alt="командная строка раскрашена зеленым" width="320" ><img src="examples/command_line1.jpg" alt="командная строка раскрашена зеленым" width="320" >
+<img src="examples/development.jpg" alt="установлено в production" width="450" >
+<img src="examples/production.jpg" alt="установлено в production" width="450" >
 
 ### Зависимости
 
