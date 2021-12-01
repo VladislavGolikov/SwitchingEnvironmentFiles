@@ -2,12 +2,12 @@
 const fs=require('fs');
 const colors=require('colors');
 
-const fileName=path.resolve(__dirname, `package.json`);
+//const fileName=path.resolve(__dirname, `package.json`);
 
 const command=`start node ./node_modules/mychange/my_change_mode.js`;
 const key=`sw`;
 const scriptName=`mychange`;
-//const fileName2=path.join(__dirname,`..`,`.bin`, `my_change_mode.cmd`);
+const fileName=path.join(__dirname,`..`,`..`, `package.json`);
 
 try{
     let jsonFromFile=JSON.parse(fs.readFileSync(fileName));
