@@ -89,11 +89,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Автор
 
-* **Владислав Голиков** - [Vladislav Golikov](https://github.com/VladislavGolikov)
+**Владислав Голиков** - [Vladislav Golikov](https://github.com/VladislavGolikov)
 
-## License
+## Лицензия
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Этот проект находится под лицензией MIT. Подробнее: [LICENSE.md](LICENSE.md)
 
 <!---
 ## Благодарности
