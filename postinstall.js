@@ -2,9 +2,20 @@
 const fs=require('fs');
 const colors=require('colors');
 
-const command=`start node ./node_modules/mychange/my_change_mode.js`;
+const fileNameOurs=path.join(__dirname, `package.json`); /* берем с своего джейсона имена скрипта */
+try{
+    const jsonOursFile=JSON.parse(fs.readFileSync(fileNameOurs));
+
+    const scriptName=jsonOursFile.main;
+    const scriptPathName=jsonOursFile.name;
+}
+catch(err){
+    console.log(err);
+}
+
+const command=`start node ./node_modules/${scriptPathName}/${scriptName}`;
 const key=`sw`;
-const scriptName=`mychange`;
+
 const fileName=path.join(__dirname,`..`,`..`, `package.json`);
 
 try{
