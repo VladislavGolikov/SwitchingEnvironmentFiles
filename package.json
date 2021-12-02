@@ -1,10 +1,10 @@
 {
   "name": "switching-environment-files",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "the package changes the contents of the environment variable file to change the build mode",
   "main": "switching-environment-files.js",
   "scripts": {
-    "postinstall": "start node ./node_modules/switching-environment-files/postinstall.js"
+    "postinstall": "start node ./postinstall.js"
   },
   "repository": {
     "type": "git",
