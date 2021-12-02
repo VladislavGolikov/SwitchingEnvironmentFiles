@@ -8,19 +8,13 @@ try{
 
     const scriptName=jsonOursFile.main;
     const scriptPathName=jsonOursFile.name;
-}
-catch(err){
-    console.log(err);
-}
 
-const command=`start node ./node_modules/${scriptPathName}/${scriptName}`;
-const key=`sw`;
+    const command=`start node ./node_modules/${scriptPathName}/${scriptName}`;
+    const key=`sw`;
 
-const fileName=path.join(__dirname,`..`,`..`, `package.json`);
+    const fileName=path.join(__dirname,`..`,`..`, `package.json`);
 
-try{
     const jsonFromFile=JSON.parse(fs.readFileSync(fileName));
-
 
     jsonFromFile.scripts.sw=command;
 
