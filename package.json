@@ -22,5 +22,8 @@
   "homepage": "https://github.com/VladislavGolikov/SwitchingEnvironmentFiles#readme",
   "dependencies": {
     "colors": "^1.4.0"
+  },
+  "np": {
+    "branch": "master"
   }
 }
