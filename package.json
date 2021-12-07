@@ -4,7 +4,8 @@
   "description": "the package changes the contents of the environment variable file to change the build mode",
   "main": "switching-environment-files.js",
   "scripts": {
-    "postinstall": "start node postinstall.js"
+    "postinstall": "start node postinstall.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,5 @@
   "homepage": "https://github.com/VladislavGolikov/SwitchingEnvironmentFiles#readme",
   "dependencies": {
     "colors": "^1.4.0"
-  },
-  "np": {
-    "branch": "master"
   }
 }

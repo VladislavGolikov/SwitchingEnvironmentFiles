@@ -47,4 +47,8 @@ catch(err){
 /* задержка закрытия консоли */
 setTimeout(()=>console.log(''),5000);
 
+/* пробуем функцию для теста jest: (это заглушка пока будущего тестирования...) */
 
+module.exports.functionForTest=function probe(a) {
+    return a;
+}
