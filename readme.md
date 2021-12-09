@@ -90,7 +90,7 @@ Please read [CONTRIBUTING.md](ссылка на файл)
 ## Версии
 
 Для управления версиями в проекте используется [SemVer](http://semver.org/).
- [Доступные версии здесь](https://github.com/VladislavGolikov/SwitchingEnvironmentFiles/tags).
+ Доступные версии [здесь](https://github.com/VladislavGolikov/SwitchingEnvironmentFiles/tags).
 
 ## Автор
 
