@@ -83,13 +83,14 @@ Add additional notes about how to deploy this on a live system
 <!---
 ## Contributing Содействие...
 
-тут пока некого отоброжать...
+пока обойдемся без этого...
 
 Please read [CONTRIBUTING.md](ссылка на файл)
 -->
 ## Версии
 
-В проекте используется [SemVer](http://semver.org/) для управления версиями. Доступные версии смотри: [tags on this repository](ссылка-на-теги-проекта...).
+Для управления версиями в проекте используется [SemVer](http://semver.org/).
+ [Доступные версии здесь](https://github.com/VladislavGolikov/SwitchingEnvironmentFiles/tags).
 
 ## Автор
 
